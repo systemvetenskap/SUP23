@@ -33,6 +33,12 @@ namespace SUP23
             // steg 1
             // steg 2
             // steg 3 
+            // Skapar en cool inloggningsfunktion 
+            // nu har jag kodat 
+            if (true)
+            {
+
+            }
             InitializeComponent();
         }
     }
