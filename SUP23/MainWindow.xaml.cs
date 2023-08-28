@@ -25,6 +25,7 @@ namespace SUP23
             // en  första kommentar
             // ännu en kommentar
             // Jag vill också lägga till en kommentar
+            // Japp
             InitializeComponent();
         }
     }
