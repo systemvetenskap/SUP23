@@ -22,17 +22,7 @@ namespace SUP23
     {
         public MainWindow()
         {
-            // en  första kommentar
-            // ännu en kommentar
-            // Jag vill också lägga till en kommentar
-            // Japp
-            // Oki
-            // Nu blev vi vänner igen
-            // Mer kod
-            // ALT +G + C
-            // steg 1
-            // steg 2
-            // steg 3 
+            // Skapar en cool inloggningsfunktion
             InitializeComponent();
         }
     }
