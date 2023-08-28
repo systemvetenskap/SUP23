@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SUP23"
+        xmlns:vm="clr-namespace:SUP23.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
     <Grid>
-
+        <TextBlock FontSize="33" HorizontalAlignment="Left" Margin="160,139,0,0" TextWrapping="Wrap" Text="{Binding Firstname}" VerticalAlignment="Top" Height="90" Width="211"/>
     </Grid>
 </Window>
