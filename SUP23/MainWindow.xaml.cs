@@ -32,7 +32,7 @@ namespace SUP23
             // ALT +G + C
             // steg 1
             // steg 2
-            // steg 3
+            // steg 3 
             InitializeComponent();
         }
     }
