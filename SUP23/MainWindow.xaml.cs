@@ -28,6 +28,7 @@ namespace SUP23
             // Japp
             // Oki
             // Nu blev vi vänner igen
+            // Mer kod
             InitializeComponent();
         }
     }
