@@ -30,6 +30,9 @@ namespace SUP23
             // Nu blev vi vänner igen
             // Mer kod
             // ALT +G + C
+            // steg 1
+            // steg 2
+            // steg 3
             InitializeComponent();
         }
     }
