@@ -22,6 +22,7 @@ namespace SUP23
     {
         public MainWindow()
         {
+            // en  första kommentar
             InitializeComponent();
         }
     }
