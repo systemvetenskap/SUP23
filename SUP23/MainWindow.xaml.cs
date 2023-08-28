@@ -25,7 +25,9 @@ namespace SUP23
             // en  första kommentar
             // ännu en kommentar
             // Jag vill också lägga till en kommentar
+            // Japp
             // Oki
+            // Nu blev vi vänner igen
             InitializeComponent();
         }
     }
