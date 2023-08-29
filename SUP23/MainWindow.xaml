@@ -11,6 +11,6 @@
         <vm:MainViewModel/>
     </Window.DataContext>
     <Grid>
-        <TextBlock FontSize="33" HorizontalAlignment="Left" Margin="160,139,0,0" TextWrapping="Wrap" Text="{Binding Firstname}" VerticalAlignment="Top" Height="90" Width="211"/>
+        <TextBlock FontSize="33" HorizontalAlignment="Left" Margin="160,139,0,0" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Top" Height="90" Width="211"/>
     </Grid>
 </Window>
