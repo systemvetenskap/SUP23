@@ -14,8 +14,12 @@ namespace SUP23.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
+        /// <summary>
+        /// Firstname for new wizard
+        /// </summary>
         public string Firstname { get; set; }
         public string Lastname { get; set; }
+        public Wizard SelectedWizard { get; set; }
         public ICommand AddWizardCommand { get; private set; }
         /// <summary>
         /// Wizards at Hogwarts

@@ -12,31 +12,42 @@
     </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="143*"/>
-            <ColumnDefinition Width="113*"/>
-            <ColumnDefinition Width="544*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <TextBlock FontSize="33" HorizontalAlignment="Left" Margin="17,139,0,0" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Top" Height="90" Width="211" Grid.Column="1" Grid.ColumnSpan="2"/>
 
         <!--ListBox x:Name="listBox" ItemsSource="{Binding Wizards}" DisplayMemberPath="Fullname" Margin="71,33,633,346"/>-->
 
 
-        <!--<ListBox
-            ItemsSource="{Binding Wizards}" Margin="0,69,36,135" Grid.Column="2">
-
-            <DataTemplate>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                    Text="{Binding Firstname}"></TextBlock>
-                    <TextBlock
-     Text="{Binding Lastname}"></TextBlock>
-                </StackPanel>
-            </DataTemplate>
-        </ListBox>-->
+        <ListBox
+    x:Name="listBox"
+    Margin="5"
+    ItemsSource="{Binding Wizards}"
+    SelectedItem="{Binding SelectedWizard}"
+            Grid.Column="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock
+                    FontWeight="Bold"
+                    Foreground="Navy"
+                    Text="{Binding Firstname}" />
+                        <Rectangle Fill="Pink" Width="12" Margin="5,0,5,0"/>
+                        <TextBlock
+                    FontWeight="Bold"
+                    Foreground="Navy"
+                    Text="{Binding Lastname}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <StackPanel Margin="2,4,5,7">
             <TextBox  HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap" Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
             <TextBox HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap" Text="{Binding Lastname, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
             <Button x:Name="button" Content="Button" Command="{Binding AddWizardCommand}" HorizontalAlignment="Left" Margin="44,139,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="button1" Content="Button"/>
         </StackPanel>
 
     </Grid>
