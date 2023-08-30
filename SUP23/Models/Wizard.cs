@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SUP23.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace SUP23.Models
     /// <summary>
     /// Wizard with magic skills
     /// </summary>
-    public class Wizard
+    public class Wizard : BaseViewModel
     {
         public Wizard(string firstname, string lastname)
         {
