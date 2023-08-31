@@ -5,18 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SUP23"
         xmlns:vm="clr-namespace:SUP23.ViewModels"
+        xmlns:converters="clr-namespace:SUP23.Converters"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.DataContext>
         <vm:MainViewModel/>
     </Window.DataContext>
+    <Window.Resources>
+        <converters:BloodStatusToColorConverter x:Key="BloodStatusToColorConverter" />
+
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock FontSize="33" HorizontalAlignment="Left" Margin="17,139,0,0" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Top" Height="90" Width="211" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBlock FontSize="33" HorizontalAlignment="Left" Margin="17,139,0,0" TextWrapping="Wrap" Text="{Binding Firstname}" VerticalAlignment="Top" Height="90" Width="211" Grid.Column="1" Grid.ColumnSpan="2"/>
 
         <!--ListBox x:Name="listBox" ItemsSource="{Binding Wizards}" DisplayMemberPath="Fullname" Margin="71,33,633,346"/>-->
 
@@ -34,7 +39,7 @@
                     FontWeight="Bold"
                     Foreground="Navy"
                     Text="{Binding Firstname}" />
-                        <Rectangle Fill="Pink" Width="12" Margin="5,0,5,0"/>
+                        <Rectangle Fill="{Binding BloodStatus, Converter={StaticResource BloodStatusToColorConverter}}" Width="12" Margin="5,0,5,0"/>
                         <TextBlock
                     FontWeight="Bold"
                     Foreground="Navy"

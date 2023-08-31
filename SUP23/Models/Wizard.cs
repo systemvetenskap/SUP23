@@ -1,4 +1,5 @@
-﻿using SUP23.ViewModels;
+﻿using SUP23.Enums;
+using SUP23.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,12 @@ namespace SUP23.Models
     /// </summary>
     public class Wizard : BaseViewModel
     {
-        public Wizard(string firstname, string lastname)
+        public BloodStatus BloodStatus { get; set; }
+        public Wizard(string firstname, string lastname, BloodStatus bloodStatus = BloodStatus.Fullblood)
         {
             Firstname = firstname;
             Lastname = lastname;
+            BloodStatus = bloodStatus;
         }
 
         public string Firstname { get; set; }

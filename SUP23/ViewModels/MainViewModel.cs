@@ -1,4 +1,5 @@
 ﻿using SUP23.Commands;
+using SUP23.Enums;
 using SUP23.Models;
 using System;
 using System.Collections.Generic;
@@ -30,11 +31,11 @@ namespace SUP23.ViewModels
         public MainViewModel()
         {
             AddWizardCommand = new RelayCommand(x => AddWizard(), x => ButtonIsEnabled());
-
+          
             Wizards = new ObservableCollection<Wizard>()
             {
-                new Wizard("Erik", "Öberg"),
-                new Wizard("Eva", "Morlind"),
+                new Wizard("Erik", "Öberg", bloodStatus:BloodStatus.Halfblood),
+                new Wizard("Eva", "Morlind", Enums.BloodStatus.Halfblood),
             };
         }
         private bool ButtonIsEnabled()
