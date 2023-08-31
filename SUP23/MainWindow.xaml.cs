@@ -22,8 +22,8 @@ namespace SUP23
     {
         public MainWindow()
         {
-            // Skapar en cool inloggningsfunktion
             InitializeComponent();
         }
+
     }
 }
