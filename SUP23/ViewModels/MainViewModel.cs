@@ -22,6 +22,7 @@ namespace SUP23.ViewModels
         public string Lastname { get; set; }
         public Wizard SelectedWizard { get; set; }
         public ICommand AddWizardCommand { get; private set; }
+        public NumberComponentViewModel NumberComponentViewModel { get; set; }
         /// <summary>
         /// Wizards at Hogwarts
         /// </summary>
@@ -30,12 +31,13 @@ namespace SUP23.ViewModels
         // Det måste vara properties 
         public MainViewModel()
         {
+            NumberComponentViewModel = new NumberComponentViewModel();
             AddWizardCommand = new RelayCommand(x => AddWizard(), x => ButtonIsEnabled());
           
             Wizards = new ObservableCollection<Wizard>()
             {
                 new Wizard("Erik", "Öberg", bloodStatus:BloodStatus.Halfblood),
-                new Wizard("Eva", "Morlind", Enums.BloodStatus.Halfblood),
+                new Wizard("Eva", "Morlind", Enums.BloodStatus.Fullblood),
             };
         }
         private bool ButtonIsEnabled()
@@ -44,6 +46,7 @@ namespace SUP23.ViewModels
         }
      private void AddWizard()
         {
+            NumberComponentViewModel.Number++;
             var wizard = new Wizard(firstname: Firstname, lastname: Lastname);
             Wizards.Add(wizard);
         }
