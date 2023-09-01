@@ -12,6 +12,8 @@ namespace SUP23.ViewModels
     {
         public ICommand IncreaseNumberCommand { get;private set; }
         public int Number { get; set; } = 100;
+        public int Health { get; set; }
+        public bool IsHealthLevelCritical => Health <= 20;
         public NumberComponentViewModel()
         {
             IncreaseNumberCommand = new RelayCommand(x => IncreaseNumber(), x => true);
@@ -19,7 +21,11 @@ namespace SUP23.ViewModels
 
         private void IncreaseNumber()
         {
-            Number++;
+            Number += 2;
+        }
+        private void DecreaseHealth(int value)
+        {
+            Health -= value;
         }
     }
 }
